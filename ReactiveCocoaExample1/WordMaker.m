@@ -37,7 +37,7 @@
         self.outputSignal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
             [inputSignal subscribeNext:^(NSNumber *charObj) {
                 char c = [charObj charValue];
-                switch (c) {
+                switch (tolower(c)) {
                     case 'a':
                     case 'e':
                     case 'i':
