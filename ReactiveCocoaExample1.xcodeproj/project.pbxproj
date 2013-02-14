@@ -17,6 +17,7 @@
 		79D245F716CD8616007C5F05 /* LowercaseEmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D245F616CD8616007C5F05 /* LowercaseEmitter.m */; };
 		79D245FA16CD8808007C5F05 /* CharacterSignalLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D245F916CD8808007C5F05 /* CharacterSignalLogger.m */; };
 		79D245FD16CD8E37007C5F05 /* LowercaseToUppercaseCharacterSignalTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D245FC16CD8E37007C5F05 /* LowercaseToUppercaseCharacterSignalTransformer.m */; };
+		79D2460216CD9586007C5F05 /* WordMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D2460116CD9586007C5F05 /* WordMaker.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,8 @@
 		79D245F916CD8808007C5F05 /* CharacterSignalLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterSignalLogger.m; sourceTree = "<group>"; };
 		79D245FB16CD8E37007C5F05 /* LowercaseToUppercaseCharacterSignalTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LowercaseToUppercaseCharacterSignalTransformer.h; sourceTree = "<group>"; };
 		79D245FC16CD8E37007C5F05 /* LowercaseToUppercaseCharacterSignalTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LowercaseToUppercaseCharacterSignalTransformer.m; sourceTree = "<group>"; };
+		79D2460016CD9586007C5F05 /* WordMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordMaker.h; sourceTree = "<group>"; };
+		79D2460116CD9586007C5F05 /* WordMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordMaker.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +102,8 @@
 				79D245E516CD83A7007C5F05 /* AppDelegate.m */,
 				79D245F816CD8808007C5F05 /* CharacterSignalLogger.h */,
 				79D245F916CD8808007C5F05 /* CharacterSignalLogger.m */,
+				79D2460016CD9586007C5F05 /* WordMaker.h */,
+				79D2460116CD9586007C5F05 /* WordMaker.m */,
 				79D245FB16CD8E37007C5F05 /* LowercaseToUppercaseCharacterSignalTransformer.h */,
 				79D245FC16CD8E37007C5F05 /* LowercaseToUppercaseCharacterSignalTransformer.m */,
 				79D245F516CD8616007C5F05 /* LowercaseEmitter.h */,
@@ -190,6 +195,7 @@
 				79D245F716CD8616007C5F05 /* LowercaseEmitter.m in Sources */,
 				79D245FA16CD8808007C5F05 /* CharacterSignalLogger.m in Sources */,
 				79D245FD16CD8E37007C5F05 /* LowercaseToUppercaseCharacterSignalTransformer.m in Sources */,
+				79D2460216CD9586007C5F05 /* WordMaker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
