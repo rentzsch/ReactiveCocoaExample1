@@ -10,9 +10,9 @@
 #import <ReactiveCocoa/ReactiveCocoa.h>
 
 @interface LowercaseEmitter ()
-@property(assign)  char              currentChar;
-@property(strong)  NSTimer           *timer;
-@property(strong)  RACSubject        *signal;
+@property(assign)  char        currentChar;
+@property(strong)  NSTimer     *timer;
+@property(strong)  RACSubject  *signal;
 @end
 
 @implementation LowercaseEmitter
