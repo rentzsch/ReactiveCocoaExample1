@@ -9,46 +9,14 @@
 #import "WordMaker.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
 
+/*
+ Demonstrates a class-based transformer that requires state between sent values.
+ 
+ The first implementation stores its state in explicit properties while the second version
+ stores it in the closure.
+ */
+
 #if 1
-
-@implementation WordMaker
-
-+ (RACSignal*)makerWithInputSignal:(RACSignal*)inputSignal {
-    __block char firstConsonant, secondVowel, thirdConsonant;
-    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        [inputSignal subscribeNext:^(NSNumber *charObj) {
-            char c = [charObj charValue];
-            switch (c) {
-                case 'a':
-                case 'e':
-                case 'i':
-                case 'o':
-                case 'u':
-                    secondVowel = c;
-                    break;
-                default:
-                    firstConsonant = thirdConsonant;
-                    thirdConsonant = c;
-                    break;
-            }
-            if (firstConsonant && secondVowel) {
-                [subscriber sendNext:[NSString stringWithFormat:@"%c%c%c",
-                                      firstConsonant,
-                                      secondVowel,
-                                      thirdConsonant]];
-            }
-        }
-        error:^(NSError *error) {
-            [subscriber sendError:error];
-        }
-        completed:^{
-            [subscriber sendCompleted];
-        }];
-        return nil;
-    }];
-}
-
-#else
 
 @interface WordMaker ()
 @property(assign)  char       firstConsonant;
@@ -99,6 +67,45 @@
         }];
     }
     return self;
+}
+
+#else
+
+@implementation WordMaker
+
++ (RACSignal*)makerWithInputSignal:(RACSignal*)inputSignal {
+    __block char firstConsonant, secondVowel, thirdConsonant;
+    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [inputSignal subscribeNext:^(NSNumber *charObj) {
+            char c = [charObj charValue];
+            switch (tolower(c)) {
+                case 'a':
+                case 'e':
+                case 'i':
+                case 'o':
+                case 'u':
+                    secondVowel = c;
+                    break;
+                default:
+                    firstConsonant = thirdConsonant;
+                    thirdConsonant = c;
+                    break;
+            }
+            if (firstConsonant && secondVowel) {
+                [subscriber sendNext:[NSString stringWithFormat:@"%c%c%c",
+                                      firstConsonant,
+                                      secondVowel,
+                                      thirdConsonant]];
+            }
+        }
+        error:^(NSError *error) {
+            [subscriber sendError:error];
+        }
+        completed:^{
+            [subscriber sendCompleted];
+        }];
+        return nil;
+    }];
 }
 
 #endif

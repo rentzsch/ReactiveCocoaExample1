@@ -9,6 +9,10 @@
 #import "LowercaseToUppercaseCharacterSignalTransformer.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
 
+/*
+ Demonstrates a stateless class-based transformer.
+ */
+
 @implementation LowercaseToUppercaseCharacterSignalTransformer
 
 + (RACSignal*)transformerWithInputSignal:(RACSignal*)inputSignal {
