@@ -15,7 +15,7 @@
     return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         [inputSignal subscribeNext:^(NSNumber *charObj) {
             char c = [charObj charValue];
-            c -= 'a' - 'A';
+            c = toupper(c);
             [subscriber sendNext:[NSNumber numberWithChar:c]];
         }
         error:^(NSError *error) {
