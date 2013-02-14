@@ -20,7 +20,10 @@
     if (self) {
         [signal
          subscribeNext:^(id x) {
-             NSLog(@"%@ next: %c", label, [x charValue]);
+             if ([x isKindOfClass:[NSNumber class]]) {
+                 x = [NSString stringWithFormat:@"%c", [x charValue]];
+             }
+             NSLog(@"%@ next: %@", label, x);
          }
          error:^(NSError *error) {
              NSLog(@"%@ error: %@", label, error);
