@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:ReactiveCocoaExample1/ReactiveCocoaExample1.xcodeproj">
+      location = "group:ReactiveCocoaExample1.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa.xcodeproj">
    </FileRef>
 </Workspace>
