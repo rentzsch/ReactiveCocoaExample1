@@ -10,7 +10,7 @@
 #import <ReactiveCocoa/ReactiveCocoa.h>
 
 /*
- Demonstrates a class-based transformer that requires state between sent values.
+ Demonstrates a class-based processor that requires state between sent values.
  
  The first implementation stores its state in explicit properties while the second version
  stores it in the closure.
