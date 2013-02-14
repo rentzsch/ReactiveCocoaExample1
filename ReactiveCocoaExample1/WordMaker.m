@@ -74,8 +74,8 @@
 @implementation WordMaker
 
 + (RACSignal*)makerWithInputSignal:(RACSignal*)inputSignal {
-    __block char firstConsonant, secondVowel, thirdConsonant;
     return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        __block char firstConsonant, secondVowel, thirdConsonant;
         [inputSignal subscribeNext:^(NSNumber *charObj) {
             char c = [charObj charValue];
             switch (tolower(c)) {
