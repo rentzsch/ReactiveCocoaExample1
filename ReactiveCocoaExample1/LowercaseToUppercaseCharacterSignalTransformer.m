@@ -11,9 +11,16 @@
 
 /*
  Demonstrates a stateless class-based transformer.
+ 
+ The first version creates an explicit signal with the three callbacks.
+ 
+ The second leverages -[RACStream map:], which handles the common case of
+ wanting to transform one value into another for all values in a stream.
  */
 
 @implementation LowercaseToUppercaseCharacterSignalTransformer
+
+#if 1
 
 + (RACSignal*)transformerWithInputSignal:(RACSignal*)inputSignal {
     return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
@@ -31,5 +38,17 @@
         return nil;
     }];
 }
+
+#else
+
++ (RACSignal*)transformerWithInputSignal:(RACSignal*)inputSignal {
+    return [inputSignal map:^id(id value) {
+        char c = [value charValue];
+        c = toupper(c);
+        return [NSNumber numberWithChar:c];
+    }];
+}
+
+#endif
 
 @end
