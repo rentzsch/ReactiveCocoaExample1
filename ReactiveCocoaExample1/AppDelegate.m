@@ -8,12 +8,13 @@
 
 #import "AppDelegate.h"
 #import "LowercaseEmitter.h"
+#import "CharacterSignalLogger.h"
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification*)notification {
-    [LowercaseEmitter lowercaseEmitter];
-    
+    RACSignal *lowercaseSignal = [LowercaseEmitter lowercaseEmitter];
+    [CharacterSignalLogger loggerWithSignal:lowercaseSignal label:@"lowercase"];
 }
 
 @end

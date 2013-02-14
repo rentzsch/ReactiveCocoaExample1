@@ -36,7 +36,6 @@
 }
 
 - (void)timerFired:(NSTimer*)timer {
-    NSLog(@"emitting %c", self.currentChar);
     [self.signal sendNext:[NSNumber numberWithChar:self.currentChar]];
     
     if (self.currentChar == 'z') {
