@@ -6,10 +6,10 @@
 //  Copyright (c) 2013 Jonathan 'Wolf' Rentzsch. All rights reserved.
 //
 
-#import "CharacterSignalLogger.h"
+#import "SignalLogger.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
 
-@implementation CharacterSignalLogger
+@implementation SignalLogger
 
 + (instancetype)loggerWithSignal:(RACSignal*)signal label:(NSString*)label {
     return [[self alloc] initWithSignal:signal label:label];

@@ -9,14 +9,14 @@
 #import "AppDelegate.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import "LowercaseEmitter.h"
-#import "CharacterSignalLogger.h"
+#import "SignalLogger.h"
 #import "LowercaseToUppercaseCharacterSignalTransformer.h"
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification*)notification {
     RACSignal *lowercaseSignal = [LowercaseEmitter lowercaseEmitter];
-    [CharacterSignalLogger loggerWithSignal:lowercaseSignal label:@"lowercase"];
+    [SignalLogger loggerWithSignal:lowercaseSignal label:@"lowercase"];
     
     // Define transformer inline:
     RACSignal *inlineUppercaseTransformer = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
@@ -33,11 +33,11 @@
         }];
         return nil;
     }];
-    [CharacterSignalLogger loggerWithSignal:inlineUppercaseTransformer label:@"inline uppercase"];
+    [SignalLogger loggerWithSignal:inlineUppercaseTransformer label:@"inline uppercase"];
     
     // Or use a reusable transformer class:
     RACSignal *classBasedUppercaseTransformer = [LowercaseToUppercaseCharacterSignalTransformer transformerWithInputSignal:lowercaseSignal];
-    [CharacterSignalLogger loggerWithSignal:classBasedUppercaseTransformer label:@"class-based uppercase"];
+    [SignalLogger loggerWithSignal:classBasedUppercaseTransformer label:@"class-based uppercase"];
 }
 
 @end

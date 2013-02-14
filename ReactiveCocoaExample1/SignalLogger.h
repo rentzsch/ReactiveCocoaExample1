@@ -10,7 +10,7 @@
 
 @class RACSignal;
 
-@interface CharacterSignalLogger : NSObject
+@interface SignalLogger : NSObject
 
 + (instancetype)loggerWithSignal:(RACSignal*)signal label:(NSString*)label;
 
