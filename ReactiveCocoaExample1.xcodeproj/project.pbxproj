@@ -14,6 +14,7 @@
 		79D245E616CD83A7007C5F05 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D245E516CD83A7007C5F05 /* AppDelegate.m */; };
 		79D245E916CD83A7007C5F05 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79D245E716CD83A7007C5F05 /* MainMenu.xib */; };
 		79D245F216CD84CE007C5F05 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D245F116CD84CD007C5F05 /* ReactiveCocoa.framework */; };
+		79D245F716CD8616007C5F05 /* LowercaseEmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D245F616CD8616007C5F05 /* LowercaseEmitter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +31,9 @@
 		79D245E416CD83A7007C5F05 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		79D245E516CD83A7007C5F05 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		79D245E816CD83A7007C5F05 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		79D245F116CD84CD007C5F05 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = file; name = ReactiveCocoa.framework; path = ReactiveCocoa/ReactiveCocoaFramework/build/Release/ReactiveCocoa.framework; sourceTree = "<group>"; };
+		79D245F116CD84CD007C5F05 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = ReactiveCocoa/ReactiveCocoaFramework/build/Release/ReactiveCocoa.framework; sourceTree = "<group>"; };
+		79D245F516CD8616007C5F05 /* LowercaseEmitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LowercaseEmitter.h; sourceTree = "<group>"; };
+		79D245F616CD8616007C5F05 /* LowercaseEmitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LowercaseEmitter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,8 @@
 			children = (
 				79D245E416CD83A7007C5F05 /* AppDelegate.h */,
 				79D245E516CD83A7007C5F05 /* AppDelegate.m */,
+				79D245F516CD8616007C5F05 /* LowercaseEmitter.h */,
+				79D245F616CD8616007C5F05 /* LowercaseEmitter.m */,
 				79D245E716CD83A7007C5F05 /* MainMenu.xib */,
 				79D245D916CD83A7007C5F05 /* Supporting Files */,
 			);
@@ -172,6 +177,7 @@
 			files = (
 				79D245DF16CD83A7007C5F05 /* main.m in Sources */,
 				79D245E616CD83A7007C5F05 /* AppDelegate.m in Sources */,
+				79D245F716CD8616007C5F05 /* LowercaseEmitter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

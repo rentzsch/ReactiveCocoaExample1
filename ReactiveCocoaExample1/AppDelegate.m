@@ -7,12 +7,13 @@
 //
 
 #import "AppDelegate.h"
+#import "LowercaseEmitter.h"
 
 @implementation AppDelegate
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
-{
-    // Insert code here to initialize your application
+- (void)applicationDidFinishLaunching:(NSNotification*)notification {
+    [LowercaseEmitter lowercaseEmitter];
+    
 }
 
 @end
