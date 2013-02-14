@@ -11,6 +11,7 @@
 #import "LowercaseEmitter.h"
 #import "SignalLogger.h"
 #import "LowercaseToUppercaseCharacterSignalTransformer.h"
+#import "WordMaker.h"
 
 @implementation AppDelegate
 
@@ -38,6 +39,9 @@
     // Or use a reusable transformer class:
     RACSignal *classBasedUppercaseTransformer = [LowercaseToUppercaseCharacterSignalTransformer transformerWithInputSignal:lowercaseSignal];
     [SignalLogger loggerWithSignal:classBasedUppercaseTransformer label:@"class-based uppercase"];
+    
+    RACSignal *wordsSignal = [WordMaker makerWithInputSignal:lowercaseSignal];
+    [SignalLogger loggerWithSignal:wordsSignal label:@"words"];
 }
 
 @end
