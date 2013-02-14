@@ -16,6 +16,7 @@
 		79D245F216CD84CE007C5F05 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D245F116CD84CD007C5F05 /* ReactiveCocoa.framework */; };
 		79D245F716CD8616007C5F05 /* LowercaseEmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D245F616CD8616007C5F05 /* LowercaseEmitter.m */; };
 		79D245FA16CD8808007C5F05 /* CharacterSignalLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D245F916CD8808007C5F05 /* CharacterSignalLogger.m */; };
+		79D245FD16CD8E37007C5F05 /* LowercaseToUppercaseCharacterSignalTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D245FC16CD8E37007C5F05 /* LowercaseToUppercaseCharacterSignalTransformer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		79D245F616CD8616007C5F05 /* LowercaseEmitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LowercaseEmitter.m; sourceTree = "<group>"; };
 		79D245F816CD8808007C5F05 /* CharacterSignalLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterSignalLogger.h; sourceTree = "<group>"; };
 		79D245F916CD8808007C5F05 /* CharacterSignalLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterSignalLogger.m; sourceTree = "<group>"; };
+		79D245FB16CD8E37007C5F05 /* LowercaseToUppercaseCharacterSignalTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LowercaseToUppercaseCharacterSignalTransformer.h; sourceTree = "<group>"; };
+		79D245FC16CD8E37007C5F05 /* LowercaseToUppercaseCharacterSignalTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LowercaseToUppercaseCharacterSignalTransformer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,8 @@
 				79D245E516CD83A7007C5F05 /* AppDelegate.m */,
 				79D245F816CD8808007C5F05 /* CharacterSignalLogger.h */,
 				79D245F916CD8808007C5F05 /* CharacterSignalLogger.m */,
+				79D245FB16CD8E37007C5F05 /* LowercaseToUppercaseCharacterSignalTransformer.h */,
+				79D245FC16CD8E37007C5F05 /* LowercaseToUppercaseCharacterSignalTransformer.m */,
 				79D245F516CD8616007C5F05 /* LowercaseEmitter.h */,
 				79D245F616CD8616007C5F05 /* LowercaseEmitter.m */,
 				79D245E716CD83A7007C5F05 /* MainMenu.xib */,
@@ -184,6 +189,7 @@
 				79D245E616CD83A7007C5F05 /* AppDelegate.m in Sources */,
 				79D245F716CD8616007C5F05 /* LowercaseEmitter.m in Sources */,
 				79D245FA16CD8808007C5F05 /* CharacterSignalLogger.m in Sources */,
+				79D245FD16CD8E37007C5F05 /* LowercaseToUppercaseCharacterSignalTransformer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
