@@ -25,11 +25,11 @@
     self = [super init];
     if (self) {
         self.currentChar = 'a';
-        _timer = [NSTimer scheduledTimerWithTimeInterval:0.10
-                                                  target:self
-                                                selector:@selector(timerFired:)
-                                                userInfo:nil
-                                                 repeats:YES];
+        self.timer = [NSTimer scheduledTimerWithTimeInterval:0.10
+                                                      target:self
+                                                    selector:@selector(timerFired:)
+                                                    userInfo:nil
+                                                     repeats:YES];
         self.outputSignal = [RACSubject subject];
     }
     return self;
