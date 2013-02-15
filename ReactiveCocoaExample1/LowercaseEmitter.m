@@ -12,13 +12,13 @@
 @interface LowercaseEmitter ()
 @property(assign)  char        currentChar;
 @property(strong)  NSTimer     *timer;
-@property(strong)  RACSubject  *signal;
+@property(strong)  RACSubject  *outputSignal;
 @end
 
 @implementation LowercaseEmitter
 
 + (RACSignal*)lowercaseEmitter {
-    return ((LowercaseEmitter*)[[self alloc] init]).signal;
+    return ((LowercaseEmitter*)[[self alloc] init]).outputSignal;
 }
 
 - (instancetype)init {
@@ -30,16 +30,16 @@
                                                 selector:@selector(timerFired:)
                                                 userInfo:nil
                                                  repeats:YES];
-        self.signal = [RACSubject subject];
+        self.outputSignal = [RACSubject subject];
     }
     return self;
 }
 
 - (void)timerFired:(NSTimer*)timer {
-    [self.signal sendNext:[NSNumber numberWithChar:self.currentChar]];
+    [self.outputSignal sendNext:[NSNumber numberWithChar:self.currentChar]];
     
     if (self.currentChar == 'z') {
-        [self.signal sendCompleted];
+        [self.outputSignal sendCompleted];
         [self.timer invalidate];
     } else {
         self.currentChar++;
